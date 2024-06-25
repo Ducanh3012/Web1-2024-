@@ -1,0 +1,148 @@
+/* Basic CSS for layout and styling */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.search-bar input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+    flex: 1;
+}
+
+.product-grid,
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: 300px;
+    /* Cố định chiều cao hình ảnh */
+    object-fit: cover;
+    /* Đảm bảo hình ảnh phù hợp trong khung */
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product .price {
+    color: #ff6600;
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.product .description {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.product button {
+    padding: 10px;
+    background: #ff6600;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.product button:hover {
+    background: #e65500;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
