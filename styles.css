@@ -1,5 +1,3 @@
-/* Basic CSS for layout and styling */
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,32 +14,63 @@ header {
     padding: 10px 0;
 }
 
-nav ul {
-    list-style: none;
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .menu-left {
+    display: flex;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
+nav .menu-left li {
     margin: 0 15px;
 }
 
-nav ul li a {
+nav .menu-left li a,
+nav .menu-left li button {
     color: #fff;
     text-decoration: none;
+    padding: 5px 10px;
+    background: #333;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
 }
 
-.search-bar {
+nav .menu-left li a:hover,
+nav .menu-left li button:hover {
+    background: #fff;
+    color: #333;
+}
+
+nav .menu-left li button {
+    background: none;
+    border: none;
+    font-size: 1em;
+}
+
+nav .menu-right {
     display: flex;
-    justify-content: center;
-    margin: 10px 0;
+    align-items: center;
+}
+
+nav .menu-right .search-bar {
+    display: flex;
+    margin-right: 15px;
 }
 
 .search-bar input {
     padding: 5px;
     font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #ff6600;
 }
 
 .search-bar button {
@@ -50,6 +79,12 @@ nav ul li a {
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background 0.3s;
+}
+
+.search-bar button:hover {
+    background: #e65500;
 }
 
 main {
@@ -64,7 +99,8 @@ main {
     gap: 20px;
 }
 
-.product {
+.product,
+.category {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: center;
@@ -72,21 +108,22 @@ main {
     transition: transform 0.3s;
 }
 
-.product:hover {
+.product:hover,
+.category:hover {
     transform: scale(1.05);
 }
 
-.product img {
+.product img,
+.category img {
     width: 100%;
     height: 300px;
-    /* Cố định chiều cao hình ảnh */
     object-fit: cover;
-    /* Đảm bảo hình ảnh phù hợp trong khung */
     border-bottom: 1px solid #ddd;
     margin-bottom: 10px;
 }
 
-.product h2 {
+.product h2,
+.category h3 {
     font-size: 1.2em;
     margin: 10px 0;
 }

@@ -11,22 +11,24 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <ul class="menu-left">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="products.html">Products</a></li>
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="checkout.html">Checkout</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <div class="menu-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products...">
+                    <button>Search</button>
+                </div>
+            </div>
         </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search for products...">
-            <button>Search</button>
-        </div>
     </header>
     <main>
         <h1>Checkout</h1>
-        <form>
+        <form id="checkout-form">
             <div class="form-group">
                 <label for="name">Full Name:</label>
                 <input type="text" id="name" name="name" required>
@@ -72,6 +74,17 @@
                     document.getElementById("card").required = false;
                 }
             });
+        });
+
+        document.getElementById('checkout-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn việc gửi form
+
+            // Hiển thị thông báo
+            alert('Your order has been submitted successfully!');
+
+            // Sau khi hiển thị thông báo, có thể thực hiện các hành động khác như gửi dữ liệu đến máy chủ, v.v.
+            // Nếu muốn gửi form sau khi hiển thị thông báo, có thể sử dụng:
+            // this.submit();
         });
     </script>
 </body>
